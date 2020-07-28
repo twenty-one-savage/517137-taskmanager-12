@@ -101,7 +101,7 @@ const createAppDeskTemplate = () => {
       <div class="board__tasks"></div>
     </section>
     `
-  )
+  );
 };
 
 const createAppSortListTemplate = () => {
@@ -113,7 +113,7 @@ const createAppSortListTemplate = () => {
       <a href="#" class="board__sort">SORT BY DATE down</a>
     </div>
     `
-  )
+  );
 };
 
 const createAppTaskTemplate = () => {
@@ -170,7 +170,7 @@ const createAppButtonLoadTemplate = () => {
     `
     <button class="load-more" type="button">load more</button>
     `
-  )
+  );
 };
 
 const createAppTaskEditTemplate = () => {
@@ -373,14 +373,14 @@ const createAppTaskEditTemplate = () => {
             </form>
           </article>
           `
-  )
+  );
 };
 
 const render = (container, template, place) => {
   container.insertAdjacentHTML(place, template);
 };
 
-const appMainElement = document.querySelector('.main');
+const appMainElement = document.querySelector(`.main`);
 
 const appHeaderElement = appMainElement.querySelector(`.main__control`);
 
@@ -390,16 +390,16 @@ render(appMainElement, createAppFilterTemplate(), `beforeend`);
 
 render(appMainElement, createAppDeskTemplate(), `beforeend`);
 
-const appDeskElement = appMainElement.querySelector('.board');
+const appDeskElement = appMainElement.querySelector(`.board`);
 
-render(appDeskElement, createAppSortListTemplate(), 'afterbegin');
+render(appDeskElement, createAppSortListTemplate(), `afterbegin`);
 
-const appTasksListElement = appDeskElement.querySelector('.board__tasks');
+const appTasksListElement = appDeskElement.querySelector(`.board__tasks`);
 
-render(appTasksListElement, createAppTaskEditTemplate(), 'afterbegin');
+render(appTasksListElement, createAppTaskEditTemplate(), `afterbegin`);
 
 for (let i = 0; i < TASKS_COUNT; i++) {
   render(appTasksListElement, createAppTaskTemplate(), `beforeend`);
 }
 
-render(appDeskElement, createAppButtonLoadTemplate(), 'beforeend');
+render(appDeskElement, createAppButtonLoadTemplate(), `beforeend`);
