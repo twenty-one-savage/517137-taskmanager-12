@@ -143,11 +143,11 @@ body {
   color: #e7e3e3;
 }
 
-.board__filter-list {
+.board__sort-list {
   margin-bottom: 24px;
 }
 
-.board__filter {
+.board__sort {
   display: inline-block;
   margin-right: 24px;
   outline: none;
@@ -155,8 +155,8 @@ body {
   color: #000;
 }
 
-.board__filter:hover,
-.board__filter:focus {
+.board__sort:hover,
+.board__sort:focus {
   opacity: 0.7;
 }
 
